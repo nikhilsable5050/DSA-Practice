@@ -1,12 +1,6 @@
-# DSA-Practice
-Interested in Problem-Solving 
+
 # 🚀 DSA-Practice
 
-![Java](https://img.shields.io/badge/Language-Java-orange?logo=java&logoColor=white)
-![GitHub repo size](https://img.shields.io/github/repo-size/your-username/DSA-Practice)
-![GitHub stars](https://img.shields.io/github/stars/your-username/DSA-Practice?style=social)
-![GitHub forks](https://img.shields.io/github/forks/your-username/DSA-Practice?style=social)
-![Contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen)
 
 A comprehensive collection of **Data Structures and Algorithms (DSA)** problems and solutions implemented in **Java**.  
 This repository is aimed at strengthening **problem-solving skills**, improving **coding efficiency**, and preparing for **technical interviews**.
@@ -41,4 +35,4 @@ This repository is aimed at strengthening **problem-solving skills**, improving 
 
 ---
 
-## 📂 Folder Structure
+
