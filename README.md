@@ -7,26 +7,6 @@ This repository is aimed at strengthening **problem-solving skills**, improving 
 
 ---
 
-## 📌 Contents
-- Arrays  
-- Strings  
-- Linked List  
-- Stacks & Queues  
-- Trees & Binary Search Trees  
-- Graphs  
-- Dynamic Programming  
-- Searching & Sorting  
-- Miscellaneous Problems  
-
----
-
-## 🛠️ Tech Stack
-- **Language:** Java  
-- **IDE:** IntelliJ IDEA  
-- **Version Control:** Git & GitHub  
-
----
-
 ## 🎯 Purpose
 - Track my DSA learning journey  
 - Build a strong foundation in algorithms and data structures  
