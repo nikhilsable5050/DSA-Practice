@@ -1,7 +1,8 @@
 package Patterns.TwoPointer;
+
 import java.util.Arrays;
 
-public class lc1 {
+    public class lc1 {
 
 
 
@@ -41,4 +42,6 @@ public class lc1 {
             System.out.println("Indices: " + result[0] + ", " + result[1]);
         }
 
-}
+    }
+
+
