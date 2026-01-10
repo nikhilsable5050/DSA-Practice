@@ -1,6 +1,33 @@
 package Arrays;
 
+import java.util.Arrays;
 
+public class findDuplicates {
+
+    public static void main(String[] args) {
+
+        findDuplicates s = new findDuplicates();
+
+        int[] nums = {1, 3, 4, 2, 2};
+        int result = s.findDuplicate(nums);
+
+        System.out.println("Duplicate number: " + result);
+    }
+
+    public int findDuplicate(int[] nums) {
+        Arrays.sort(nums);
+
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i] == nums[i - 1]) {
+                return nums[i];
+            }
+        }
+        return -1;
+    }
+}
+
+
+/*
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
@@ -26,3 +53,6 @@ import java.util.Set;
             System.out.println("Duplicate numbers are: " + duplicateNumbers); // Output: [1, 3, 8]
         }
 }
+
+
+ */
