@@ -2,35 +2,25 @@ package Arrays;
 
 public class ReverseArray {
     public static void main(String[] args) {
-        /*
-        int[] arr = {10,20,30,40,50};
-        int i =0;
-        int j = arr.length-1;
-        while(i < j){
-            int temp = arr[i];
-            arr[i] = arr[j];
-            arr[j] = temp;
-            i++;
-            j--;
-        }
-        for(int k=0;k<arr.length;k++){
-            System.out.print(arr[k] + " ");
+        int[] arr = {1, 2, 3, 4, 5};
+
+        // Inline Two-Pointer Logic
+        int start = 0;
+        int end = arr.length - 1;
+
+        while (start < end) {
+            // Swap logic
+            int temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+
+            start++;
+            end--;
         }
 
-         */
-
-        int[] arr = {1,2,3,4,5};
-        int i= 0;
-        int j = arr.length-1;
-        while(i < j){
-            int temp = arr[i];
-            arr[i] = arr[j];
-            arr[j] = temp;
-            i++;
-            j--;
-        }
-        for(int k=0;k<arr.length;k++ ){
-            System.out.println(arr[k]);
+        // Output results
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
         }
     }
 }
