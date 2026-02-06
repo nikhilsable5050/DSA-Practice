@@ -1,36 +1,33 @@
 package Arrays;
 
 public class SecondLargest {
-    public static void main(String[] args) {
-        // Example array with duplicates and different values
-        int[] arr = {10, 20, 4, 20, 15};
+    static int secondLargest(int[] arr) {
+        int max1 = 0;
+        int max2 = 0;
 
-        int result = findSecondLargest(arr);
-
-        if (result == -1) {
-            System.out.println("There is no second largest element.");
-        } else {
-            System.out.println("The second largest element is: " + result);
+        if(arr[0] > arr[1]){
+            max1 = arr[0];
+            max2 = arr[1];
         }
+        else{
+            max1 = arr[1];
+            max2 = arr[0];
+        }
+
+        for(int i = 2; i < arr.length; i++){
+            if(arr[i] > max1){
+                max2 = max1;   // fix here
+                max1 = arr[i];
+            }
+            else if(arr[i] > max2){
+                max2 = arr[i];
+            }
+        }
+        return max2;
     }
 
-    public static int findSecondLargest(int[] arr) {
-        // Initialize with very small values to handle any positive integers
-        int max = -1;
-        int secondMax = -1;
-
-        for (int i = 0; i < arr.length; i++) {
-            // If current element is greater than max
-            if (arr[i] > max) {
-                secondMax = max; // Old max becomes second max
-                max = arr[i];    // Current becomes max
-            }
-            // If element is between max and secondMax
-            else if (arr[i] > secondMax && arr[i] != max) {
-                secondMax = arr[i];
-            }
-        }
-
-        return secondMax;
+    public static void main(String[] args) {
+        int[] arr = {20,42,6,25,30,88};
+        System.out.println(secondLargest(arr));
     }
 }
