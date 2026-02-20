@@ -2,34 +2,36 @@ package Patterns.TwoPointer;
 
 public class RemoveDuplicates {
 
-    public static int removeDuplicates(int[] arr) {
-        if (arr.length == 0) {
-            return 0;
-        }
+    public static int removeDuplicate(int[] arr){
 
-        int i = 0; // slow pointer
+        if(arr.length == 0) return 0;
 
-        for (int j = 1; j < arr.length; j++) { // fast pointer
-            if (arr[j] != arr[i]) {
+        int i = 0;
+
+        for(int j = 1; j < arr.length; j++){
+            if(arr[j] != arr[i]){
                 i++;
                 arr[i] = arr[j];
             }
         }
 
-        return i + 1; // new length
+        return i + 1;
     }
 
-    public static void main(String[] args) {
-        int[] arr = {1, 1, 2, 2, 3, 4, 4};
+    public static void main(String[] args){
 
-        int newLength = removeDuplicates(arr);
+        int[] arr = {2,2,3,3,4,6,6};
 
-        System.out.println("New Length: " + newLength);
-        System.out.print("Modified Array: ");
+        for(int i = 0; i < arr.length; i++){
+            System.out.print(arr[i] + " ");
+        }
 
-        for (int k = 0; k < newLength; k++) {
-            System.out.print(arr[k] + " ");
+        int newLength = removeDuplicate(arr);   // store result
+
+        System.out.println(" ");
+
+        for(int i = 0; i < newLength; i++){     // print only valid part
+            System.out.print(arr[i] + " ");
         }
     }
 }
-
