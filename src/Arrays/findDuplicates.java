@@ -1,22 +1,32 @@
 package Arrays;
 
-import java.util.Arrays;
 
 public class findDuplicates {
-
     public static void main(String[] args) {
-
-        findDuplicates s = new findDuplicates();
-
-        int[] nums = {1, 3, 4, 2, 2};
-        int result = s.findDuplicate(nums);
-
-        System.out.println("Duplicate number: " + result);
+        int[] arr = {4,2,7,2,9,4,1};
+        for(int i=0;i<arr.length;i++){
+            for(int j=i+1;j<arr.length;j++){
+                if(arr[i]==arr[j]){
+                    System.out.println(arr[i]);
+                    break; // avoid printing same duplicate multiple times
+                }
+            }
+        }
     }
 
+}
+
+/*
+import java.util.Arrays;
+public class findDuplicates {
+    public static void main(String[] args) {
+        findDuplicates s = new findDuplicates();
+        int[] nums = {1, 3, 4, 2, 2};
+        int result = s.findDuplicate(nums);
+        System.out.println("Duplicate number: " + result);
+    }
     public int findDuplicate(int[] nums) {
         Arrays.sort(nums);
-
         for (int i = 1; i < nums.length; i++) {
             if (nums[i] == nums[i - 1]) {
                 return nums[i];
@@ -25,6 +35,8 @@ public class findDuplicates {
         return -1;
     }
 }
+
+ */
 
 
 /*
