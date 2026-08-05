@@ -12,6 +12,7 @@ public class findDuplicates {
 
             if (map.containsKey(arr[i])) {
                 map.put(arr[i], map.get(arr[i]) + 1);
+                //This number is already in the HashMap. Get its current count, add 1, and update the count
             } else {
                 map.put(arr[i], 1);
             }
@@ -26,6 +27,7 @@ public class findDuplicates {
 
                 // Mark as printed
                 map.put(arr[i], 0);
+                //Update the frequency of the current element to 0 after printing it.
             }
         }
     }
