@@ -1,6 +1,37 @@
 package Arrays;
 
+import java.util.HashMap;
+public class findDuplicates {
+    public static void main(String[] args) {
+        int[] arr = {4, 2, 7, 2, 4, 5, 7};
 
+        HashMap<Integer, Integer> map = new HashMap<>();
+
+        // Count frequency
+        for (int i = 0; i < arr.length; i++) {
+
+            if (map.containsKey(arr[i])) {
+                map.put(arr[i], map.get(arr[i]) + 1);
+            } else {
+                map.put(arr[i], 1);
+            }
+        }
+
+        // Print duplicates
+        System.out.println("Duplicates are:");
+
+        for (int i = 0; i < arr.length; i++) {
+            if (map.get(arr[i]) > 1) {
+                System.out.println(arr[i]);
+
+                // Mark as printed
+                map.put(arr[i], 0);
+            }
+        }
+    }
+}
+
+/*
 public class findDuplicates {
     public static void main(String[] args) {
         int[] arr = {4,2,7,2,9,4,1};
@@ -15,6 +46,8 @@ public class findDuplicates {
     }
 
 }
+
+ */
 
 /*
 import java.util.Arrays;
