@@ -4,6 +4,28 @@ import static java.util.Collections.reverse;
 
 public class ReverseString {
     public static void main (String[] args) {
+
+
+        String str = "hello";
+
+        char[] arr = str.toCharArray();
+
+        int left = 0;
+        int right = arr.length - 1;
+
+        while (left < right) {
+
+            char temp = arr[left];
+            arr[left] = arr[right];
+            arr[right] = temp;
+
+            left++;
+            right--;
+        }
+
+        System.out.println(new String(arr));
+    }
+
       /*
         // StringBuilder does the same work as buffer
         StringBuffer obj = new StringBuffer("Nikhil Sable");
@@ -21,6 +43,8 @@ public class ReverseString {
         System.out.println(result);
 
          */
+
+        /*
         String s1 = "hello";
         String s2 = "";
         for(int i=s1.length()-1;i >=0;i--){
@@ -28,5 +52,9 @@ public class ReverseString {
         }
         System.out.println(s2);
 
+
+
+         */
+
     }
-}
+
