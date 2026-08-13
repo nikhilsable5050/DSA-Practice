@@ -6,9 +6,14 @@ public class ReverseString {
     public static void main (String[] args) {
 
 
+
         String str = "hello";
 
-        char[] arr = str.toCharArray();
+        char[] arr = new char[str.length()];
+
+        for (int i = 0; i < str.length(); i++) {
+            arr[i] = str.charAt(i);
+        }
 
         int left = 0;
         int right = arr.length - 1;
