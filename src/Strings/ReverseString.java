@@ -1,25 +1,17 @@
 package Strings;
 
 import static java.util.Collections.reverse;
-
 public class ReverseString {
     public static void main (String[] args) {
-
-
-
         String str = "hello";
-
         char[] arr = new char[str.length()];
-
         for (int i = 0; i < str.length(); i++) {
             arr[i] = str.charAt(i);
         }
 
         int left = 0;
         int right = arr.length - 1;
-
         while (left < right) {
-
             char temp = arr[left];
             arr[left] = arr[right];
             arr[right] = temp;
@@ -27,7 +19,6 @@ public class ReverseString {
             left++;
             right--;
         }
-
         System.out.println(new String(arr));
     }
 
